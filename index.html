@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightMinds Hub - Relay Projects & Collaboration</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header with centered title and top-right navigation -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 text-center position-relative">
+                    <h1 class="main-title">
+                        <i class="fas fa-lightbulb text-warning me-3"></i>
+                        BrightMinds Hub
+                        <i class="fas fa-users text-primary ms-3"></i>
+                    </h1>
+                    
+                    <!-- Top-right navigation -->
+                    <nav class="top-nav">
+                        <ul class="nav-links">
+                            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="/new"><i class="fas fa-plus"></i> New Post</a></li>
+                            <li><a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a href="/register"><i class="fas fa-user-plus"></i> Register</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Relay Theme -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h2 class="hero-title">
+                            <span class="highlight">Relay</span> Your Ideas,
+                            <span class="highlight">Amplify</span> Your Impact
+                        </h2>
+                        <p class="hero-description">
+                            Join a dynamic community where students collaborate on relay projects, share knowledge, 
+                            and create meaningful change together. Every idea is a baton passed to ignite innovation.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-lg me-3" onclick="showJoinMessage()">
+                                <i class="fas fa-rocket me-2"></i>Start Your Relay
+                            </button>
+                            <button class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-play me-2"></i>Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Students collaborating on relay projects" class="img-fluid rounded-3 shadow-lg">
+                        <div class="floating-card">
+                            <i class="fas fa-exchange-alt text-primary"></i>
+                            <span>Relay Projects Active</span>
+                            <strong>127</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspirational Quotes Section -->
+    <section class="quotes-section">
+        <div class="container">
+            <h3 class="section-title text-center mb-5">
+                <i class="fas fa-quote-left me-2"></i>
+                Voices of Collaboration
+            </h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="quote-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <blockquote>
+                            "Alone we can do so little; together we can do so much."
+                        </blockquote>
+                        <cite>- Helen Keller</cite>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="quote-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <blockquote>
+                            "The strength of the team is each individual member. The strength of each member is the team."
+                        </blockquote>
+                        <cite>- Phil Jackson</cite>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="quote-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <blockquote>
+                            "Great things in business are never done by one person; they're done by a team of people."
+                        </blockquote>
+                        <cite>- Steve Jobs</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h3 class="section-title">
+                        <i class="fas fa-project-diagram me-2"></i>
+                        Active Relay Projects
+                    </h3>
+                    <p class="section-description">
+                        Discover ongoing collaborative projects where students are making a difference
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <span class="project-badge">Featured Project</span>
+                            <div class="project-status">
+                                <i class="fas fa-circle text-success"></i>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                        <h4 class="project-title">
+                            <i class="fas fa-chart-line me-2 text-primary"></i>
+                            Data Science Festival - VISHMAYA
+                        </h4>
+                        <p class="project-description">
+                            Recently conducted Data Science fest named VISHMAYA, which means "wonder". In this fest, 
+                            all students collaborated in relay teams to solve real-world data challenges, passing insights 
+                            from analysis to visualization to implementation. The relay format encouraged knowledge 
+                            sharing and collective problem-solving across different skill levels.
+                        </p>
+                        <div class="project-meta">
+                            <div class="participants">
+                                <i class="fas fa-users me-2"></i>
+                                <span>45 Participants</span>
+                            </div>
+                            <div class="progress-info">
+                                <span>Project Progress: 85%</span>
+                                <div class="progress mt-2">
+                                    <div class="progress-bar bg-success" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-eye me-2"></i>View Details
+                            </button>
+                            <button class="btn btn-outline-primary">
+                                <i class="fas fa-user-plus me-2"></i>Join Relay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="relay-stats">
+                        <h5 class="stats-title">
+                            <i class="fas fa-trophy me-2"></i>
+                            Relay Achievements
+                        </h5>
+                        <div class="stat-item">
+                            <div class="stat-number">127</div>
+                            <div class="stat-label">Active Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1,234</div>
+                            <div class="stat-label">Students Connected</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">89</div>
+                            <div class="stat-label">Completed Relays</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    
+                    <div class="collaboration-image mt-4">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Team collaboration" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="cta-content">
+                        <h3 class="cta-title">Ready to Pass the Baton?</h3>
+                        <p class="cta-description">
+                            Join thousands of students who are already collaborating on meaningful projects. 
+                            Your ideas could be the spark that ignites the next breakthrough.
+                        </p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-warning btn-lg me-3" onclick="showJoinMessage()">
+                                <i class="fas fa-arrow-right me-2"></i>Start Collaborating
+                            </button>
+                            <a href="/register" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-user-plus me-2"></i>Create Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-brand">
+                        <h5>
+                            <i class="fas fa-lightbulb me-2"></i>
+                            BrightMinds Hub
+                        </h5>
+                        <p>Empowering students through collaborative relay projects and shared innovation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p class="copyright">
+                        &copy; 2025 BrightMinds Hub | Relay Projects for Better Tomorrow
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
