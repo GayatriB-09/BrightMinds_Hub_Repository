@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightMinds Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">BrightMinds Hub</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New Post</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to BrightMinds Hub</h1>
+            <p>A collaborative platform where students share ideas, notes, and work together on projects & community services.</p>
+            <button onclick="alert('Thanks for joining BrightMinds Hub!')">Join Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="Students collaborating">
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section class="posts">
+        <h2>All Posts</h2>
+        <div class="post-card">
+            <h3>College Fests</h3>
+            <p>Recently Conducted Data Science fest named VISHMAYA, which means wonder. In that fest all the students...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BrightMinds Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
